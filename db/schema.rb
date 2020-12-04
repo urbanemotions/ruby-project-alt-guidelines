@@ -12,19 +12,23 @@
 
 ActiveRecord::Schema.define(version: 2020_12_03_040851) do
 
-  create_table "items", force: :cascade do |t|
-    t.string "name"
-    t.float "price"
-  end
-
   create_table "reviews", force: :cascade do |t|
     t.integer "user_id"
-    t.integer "item_id"
+    t.integer "subscription_id"
+    t.integer "rating"
+    t.string "description"
+  end
+
+  create_table "subscriptions", force: :cascade do |t|
+    t.string "name"
+    t.float "price"
+    t.boolean "status"
   end
 
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "email"
+    t.string "payment_method"
   end
 
 end
