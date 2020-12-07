@@ -56,7 +56,6 @@ class CommandLineInterface
         puts "Please select subscription to view the reviews"
         input = STDIN.gets.chomp()
         Subscription.find_by(name:input).reviews.each do |review|
-            #puts "Review: #{review.subscription.name}"
             puts "#{review.subscription.name} Review"
             puts "Rating: #{review.rating}"
             puts "Description: #{review.description}"
@@ -65,13 +64,20 @@ class CommandLineInterface
 
     def find_or_create_review
         puts "Please create review, when subscription review is not found"
+        puts "Please enter subscription name:"
         input = STDIN.gets.chomp()
         #nr = review.subscription.find_or_create_by(name:input)
         Subscription.find_or_create_by(name:input)
         #review.subscription.name = input
-        
-
-        end
+        #nr.save 
+        new_review = Review.new
+        puts "Please enter #{input} review rating (between 1-5)"
+        review_input = STDIN.gets.chomp()
+        new_review.rating = review_input
+        puts "Please enter #{input} review description"
+        description_input = STDIN.gets.chomp()
+        new_review.description = description_input
+        new_review.save
     end
 
     def exit
