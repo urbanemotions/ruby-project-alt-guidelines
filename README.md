@@ -1,5 +1,67 @@
 Module One Final Project
 ========================
+Subscription Box Reviews
+Sin Wildy GitHub:-urbanemotions
+
+Demo video:- 
+https://youtu.be/iJ-voXIhAbY
+https://youtu.be/GwUOUkfB9wM
+https://youtu.be/h9hyjRIG2TY
+https://youtu.be/GFf_Kua7sDg
+https://youtu.be/8TMoaKTpRlw
+https://youtu.be/gp4pBigKeYk
+
+Goal:- 
+* Allows users to input their name.
+* Allows users to create a subscription box review.
+* Allows users to review all subscription box reviews.
+* Allows users to update the rating and description of subscription box review.
+* Allows users to delete a subscription box review.
+
+Prerequisites:- 
+* Visual studio code
+* iTerm
+
+Installation:- 
+In iTerm:-
+* Clone the repository:- https://github.com/urbanemotions/ruby-project-alt-guidelines
+* Type 'bundle install' to ensure access to activerecord, pry, rake, and sqlite3.
+* Type 'rake db:seed' to load the seed data from db/seeds.rb
+* Type 'ruby bin/run.rb' to execute the program and explore the functionality.
+
+Gems:-
+source "https://rubygems.org"
+* gem "activerecord", '~> 5.2'
+* gem "sinatra-activerecord"
+* gem "sqlite3", '~> 1.3.6'
+* gem "pry"
+* gem "require_all"
+* gem "faker"
+
+How to:-
+* Greet user, and prompts the user to enter their name.
+* Options available:- 
+    * Press 1 to view subscription reviews.
+      * Prompt the user to enter the subscription name, which will display all reviews for that subscription.
+    * Press 2 to create a new subscription review.
+      * Prompt the user to enter the subscription name, review rating and review description. Display reviews associated with that user.
+    * Press 3 to update a existing subscription review.
+      * Display reviews associated with that user. Prompt the user to enter the Review ID number, review rating and review description. Review rating and review description will be updated. Display reviews associated with that user, including the newly updated review.
+    * Press 4 to delete a existing subscription review. By selecting the review id number.
+      * Display reviews associated with that user. Prompt the user to enter the Review ID number. The review rating and review description associated with the Review ID number will be deleted. Display reviews associated with that user, will not include the deleted review.
+    * Press 5 to exit.
+    * Press 0 to view menu options.
+    * Press anything that is not 1-5, will display the menu option. 
+
+Acknowledgement:- 
+I would like to express the deepest appreciation to Adam, Ix, and my fellow cohorts from breakout room 13 for assisting on this solo project.
+
+
+
+
+
+Module One Final Project
+========================
 
 Congratulations, you're at the end of module one! You've worked crazy hard to get here and have learned a ton.
 

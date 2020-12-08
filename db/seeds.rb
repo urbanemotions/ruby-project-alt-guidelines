@@ -11,7 +11,7 @@ end
 end
 
 50.times do
-    Review.create(user_id:Faker::Number.number(digits:10), subscription_id:Subscription.all.sample.id, rating:rand(1...5), description:Faker::Restaurant.review)
+    Review.create(user_id:User.all.sample.id, subscription_id:Subscription.all.sample.id, rating:rand(1...5), description:Faker::Restaurant.review)
 end 
 
 puts 'done'
